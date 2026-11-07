@@ -55,6 +55,25 @@
             outline: none;
         }
 
+        @supports (height: 100dvh) {
+            body { height: 100dvh; }
+        }
+
+        @media (max-width: 640px) {
+            #output { padding: 12px; font-size: 13px; }
+            .input-line { padding: 10px 12px; }
+            #commandInput { font-size: 16px; }
+        }
+
+        .input-line:focus-within {
+            border-top-color: #6f6;
+            box-shadow: 0 -1px 12px rgba(0, 255, 0, 0.18);
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: rgba(0, 255, 0, 0.35); border-radius: 2px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+
         .debug-mode * {
             outline: 1px solid rgba(255, 0, 0, 0.5) !important;
             background: rgba(255, 0, 0, 0.05) !important;
