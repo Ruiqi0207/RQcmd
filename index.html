@@ -21,6 +21,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
+            overscroll-behavior: none;
         }
 
         #output {
@@ -28,7 +29,7 @@
             overflow-y: auto;
             padding: 15px;
             font-size: 14px;
-            line-height: 1.4;
+            line-height: 1.55;
         }
 
         .input-line {
@@ -53,11 +54,16 @@
             font-size: 14px;
             flex: 1;
             outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 0;
         }
 
         @supports (height: 100dvh) {
             body { height: 100dvh; }
         }
+
+        #commandInput { min-width: 0; }
 
         @media (max-width: 640px) {
             #output { padding: 12px; font-size: 13px; }
